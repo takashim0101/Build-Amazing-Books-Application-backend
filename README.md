@@ -5,7 +5,8 @@
 This repository contains the backend code for the Amazing Books Application. It sets up an Express server and defines API endpoints for user registration, login, and information updates, among other functionalities.
 
 ## POSTMAN Demo Result
-![POSTMAN Demo](images/L5Mission0-amazing-books-app-backend-postman-post_method_example.png)
+![POSTMAN Demo](./images/L5Mission0-amazing-books-app-backend-post_method_example.png)
+
 
 ## Features
 
@@ -49,7 +50,7 @@ This repository contains the backend code for the Amazing Books Application. It 
 
    ```
 
-3. \***\*Create a .env file** in the root directory and add your environment variables:\*\*:
+3. **Create a .env file** in the root directory and add your environment variables:
 
    ```env
    MYSQL_HOST=your_mysql_host
@@ -155,7 +156,4 @@ This repository contains the backend code for the Amazing Books Application. It 
 
 ## Data Source
 
-This project utilizes example data from [Draftbit's Example Data](https://example-data.draftbit.com/). This site provides a variety of sample data that can be used for development and testing purposes.
-
-This project utilizes example data from [Draftbit's Example Data](https://example-data.draftbit.com/books). I fetched a total of **102 books** from this API for development and testing purposes.
-
+This project utilizes example data from [Draftbit's Example Data](https://example-data.draftbit.com/), which provides a variety of sample data for development and testing purposes. Specifically, I fetched a total of **102 books** from this API for use in this project[Draftbit's Example Data](https://example-data.draftbit.com/books).
