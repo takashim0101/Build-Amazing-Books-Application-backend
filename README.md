@@ -4,6 +4,9 @@
 
 This repository contains the backend code for the Amazing Books Application. It sets up an Express server and defines API endpoints for user registration, login, and information updates, among other functionalities.
 
+## POSTMAN Demo Result
+![POSTMAN Demo](images/L5Mission0-amazing-books-app-backend-postman-post_method_example.png)
+
 ## Features
 
 - User registration
@@ -77,60 +80,82 @@ This repository contains the backend code for the Amazing Books Application. It 
     "password": "yourpassword"
   }
   ```
-**_Response_**:
 
-``````html
-- <span style="color: green;">Success: 201 Created</span> -
-<span style="color: red;">Error: 400 Bad Request</span> or
-<span style="color: red;">409 Conflict</span>
+### User Login
 
-### User Login 
 - **Endpoint**: `POST /api/login`
-- **Request Body**: 
-    ```json
- {
+- **Request Body**:
+
+  ```json
+  {
     "email": "user@example.com",
-     "password": "yourpassword" 
-     } 
+    "password": "yourpassword"
+  }
+  ```
 
-### POSTMAN demo result
-
-![L5Mission0-amazing-books-app-backend-postman-post_method_example Image](images/L5Mission0-amazing-books-app-backend-postman-post_method_example.png)
-
-``````html
-- <span style="color: green;">Success: 200 Created</span> -
-<span style="color: red;">Error: 400 Bad Request</span> or
-<span style="color: red;">401 Unauthorized</span>
-
-    
 ### Update User Information
-- **Endpoint**: `PATCH /api/users/:id`
-- **Request Body**: ***(at least one field required):***
-    ```json
- {
+
+- **Endpoint**: `POST /api/login`
+- **Request Body**: **\*(at least one field required):**
+
+  ```json
+  {
     "email": "user@example.com",
-     "password": "newpassword" 
-     } 
+    "password": "newpassword"
+  }
+  ```
 
-``````html
-- <span style="color: green;">Success: 200 Created</span> -
-<span style="color: red;">Error: 400 Bad Request</span> or
+### POSTMAN Demo Result
 
+```json
+{
+  "message": "Login successful!",
+  "user": {
+    "id": 2,
+    "email": "test@example.com"
+  }
+}
+```
 ### Fetch Books
+
 - **Endpoint**: `GET /api/books`
-- **Response**:
-  - **Success**: `200 OK` with book data
-  - **Error**: `500 Internal Server Error`
+- **Request Body**: **\*(at least one field required as an example):**
+
+  ```json
+    {
+        "id": 1,
+        "title": "The Hunger Games",
+        "authors": "Suzanne Collins",
+        "description": "Winning will make you famous. Losing means certain death. The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory. When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. For her, survival is second nature.",
+        "edition": "",
+        "format": "Hardcover",
+        "num_pages": 374,
+        "rating": 4.33,
+        "rating_count": 5519135,
+        "review_count": 160706,
+        "genres": "Young Adult, Fiction, Science Fiction, Dystopia, Fantasy",
+        "genre_list": "Young Adult,Fiction,Science Fiction,Dystopia,Fantasy",
+        "image_url": "https://images.gr-assets.com/books/1447303603l/2767052.jpg",
+        "Quote1": "“You don’t forget the face of the person who was your last hope.”",
+        "Quote2": "“Remember, we're madly in love, so it's all right to kiss me anytime you feel like it.”",
+        "Quote3": "“May the odds be ever in your favor!”"
+    }
+  ```
 
 ### Fetch Logo
+
 - **Endpoint**: `GET /api/logo`
-- **Response**:
-  - **Success**: `200 OK` with logo URL
+- **Request Body**: **\*(at least one field required as an example):**
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+  ```json
+    {
+         "logoUrl": " "
+    }
+  ```
 
-### Explanation- The endpoint, request body, and response are clearly separated.- The JSON format is organized.Adding this format to the README will make it clearer. 
+## Data Source
 
-     
-     
+This project utilizes example data from [Draftbit's Example Data](https://example-data.draftbit.com/). This site provides a variety of sample data that can be used for development and testing purposes.
+
+This project utilizes example data from [Draftbit's Example Data](https://example-data.draftbit.com/books). I fetched a total of **102 books** from this API for development and testing purposes.
+
