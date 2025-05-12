@@ -5,7 +5,7 @@
 This repository contains the backend code for the Amazing Books Application. It sets up an Express server and defines API endpoints for user registration, login, and information updates, among other functionalities.
 
 ## POSTMAN Demo Result
-![POSTMAN Demo](images/L5Mission0-amazing-books-app-backend-post_method_example.png)
+![POSTMAN Demo](public/images/L5Mission0-amazing-books-app-backend-post_method_example.png)
 
 
 
